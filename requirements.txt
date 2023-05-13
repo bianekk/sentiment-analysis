@@ -1,0 +1,25 @@
+black
+jupyter
+jupyterthemes
+pandas
+# scikit-learn==1.2.1
+# mlflow==1.30.0
+# numpy==1.23.5
+# protobuf==3.20
+# matplotlib==3.7.1
+# dvc==2.51.0
+# pyyaml==6.0
+# seaborn==0.12.2
+# py-markdown-table
+# pyyaml
+# spacy
+# gensim
+shap
+Flask==2.0.0
+praw==7.2.0
+statsd==3.3.0
+streamlit
+transformers
+tensorflow
+plotly
+altair

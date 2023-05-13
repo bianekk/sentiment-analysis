@@ -1,0 +1,25 @@
+services:
+  app:
+    build: .
+    ports:
+      - 8501:8501
+  graphite:
+    image: graphiteapp/graphite-statsd
+    container_name: graphite
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 80:80
+      - 2003-2004:2003-2004 
+      - 2023-2024:2023-2024 
+      - 8125:8125/udp 
+      - 8126:8126 
+    restart: always
+  grafana:
+    image: grafana/grafana
+    ports:
+      - 8080:3000
+    environment:
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel
+    depends_on:
+      - graphite
